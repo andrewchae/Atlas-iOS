@@ -10,12 +10,12 @@ Pod::Spec.new do |s|
                                     'Blake Watters'   => 'blake@layer.com',
                                     'Klemen Verdnik'  => 'klemen@layer.com',
                                     'Ben Blakely'     => 'ben@layer.com' }
-  s.source                      = { git: "https://github.com/layerhq/Atlas-iOS.git", tag: "v#{s.version}" }
+  s.source                      = { git: "https://github.com/andrewchae/Atlas-iOS.git", branch: "ios7" }
   s.platform                    = :ios, '8.0'
   s.requires_arc                = true
-  s.source_files                = 'Code/**/*.{h,m}'
+  s.source_files                = 'Code', 'Code/**/*.{h,m}'
+  s.public_header_files         = 'Code/**/*.h'
   s.ios.resource_bundle         = { 'AtlasResource' => 'Resources/*' }
-  s.header_mappings_dir         = 'Code'
   s.ios.frameworks              = %w{UIKit CoreLocation MobileCoreServices}
   s.ios.deployment_target       = '7.0'
   s.dependency                  'LayerKit', '>= 0.16.0'
